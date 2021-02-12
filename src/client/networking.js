@@ -1,6 +1,7 @@
 import io from "socket.io-client";
+import { processGameUpdate } from './state';
 
-//!constants import
+const Constants = require("../shared/constants");
 
 const socket = io(`ws://${window.location.host}`);
 const connectedPromise = new Promise((resolve) => {
